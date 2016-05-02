@@ -5,16 +5,18 @@ public class Student {
 	private String gender;
 	private int classYr;
 	private int age;
+	private int birthYr;
 	
 	
 	/* Data members above, methods below */
 	
 	// Right now a "full data" constructor only
-	public Student(String newName, String newGender, int newClassYr, int newAge) {
+	public Student(String newName, String newGender, int newClassYr, int newAge, int newBirthYr) {
 		name = newName;
 		gender = newGender;
 		classYr = newClassYr;
 		age = newAge;
+		birthYr = newBirthYr;
 	}
 
 	
@@ -46,9 +48,14 @@ public class Student {
 	public int getClassYr() {
 		return classYr;
 	}
-	
+	public void setBirthDay(int date) {
+		birthYr = date;
+	}
+	public int getBirthday() {
+		return birthYr;
+	}
 	public String toString() {
-		return ("Student: " + name + " Gender: " + gender + " Class Year: " + classYr + " Age: " + age);
+		return ("Student: " + name + " Gender: " + gender + " Class Year: " + classYr + " Age: " + age + " Birth Year: " + birthYr);
 	}
 	
 	
